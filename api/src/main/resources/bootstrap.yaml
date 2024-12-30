@@ -1,0 +1,38 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        heart-beat-interval: 3000
+        heartbeat-timeout: 5000
+        ip-delete-timeout: 6000
+        server-addr: ${NACOS_SERVER_ADDR}:${NACOS_SERVER_PORT}
+        username: ${NACOS_SERVER_USER}
+        password: ${NACOS_SERVER_PASSWORD}
+        namespace: ${NACOS_NAMESPACE}
+        group: ${NACOS_GROUPID}
+        ip: ${LocalIP:}
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        username: ${spring.cloud.nacos.discovery.username}
+        password: ${spring.cloud.nacos.discovery.password}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        group: ${spring.cloud.nacos.discovery.group}
+        file-extension: yaml
+        extension-configs:
+          - data-id: common.yaml
+            group: ${spring.cloud.nacos.discovery.group}
+  application:
+    name: web2-api
+  lifecycle:
+    timeout-per-shutdown-phase: 60s
+
+
+NACOS_SERVER_ADDR: 192.168.51.212
+NACOS_SERVER_PORT: 12015
+NACOS_NAMESPACE: web2
+NACOS_GROUPID: dev
+NACOS_SERVER_USER: nacos
+NACOS_SERVER_PASSWORD: nacos
+
+LocalIP: 192.168.33.85
+LogDir: /data/logs/web2api

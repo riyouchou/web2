@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.yx.pass.remote.pms.config.PmsApiConfig,\
+  com.yx.pass.remote.pms.config.RemotePmsConfig

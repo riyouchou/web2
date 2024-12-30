@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.yx.pass.remote.feecenter.config.FeeCenterApiConfig,\
+  com.yx.pass.remote.feecenter.config.RemoteFeeCenterConfig

@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    org.yx.lib.utils.GlobalValidationExceptionHandler
